@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+:root {
+    --primary-color: #CF6376;
+    --secondary-color: #F8B7C2;
+    --tertiary-color: #FEFAFB;
+    --quaternary-color: #FFDCE6;
+    --random-color: #D2DA98;
+
+    --pinyon-script: 'Pinyon Script', cursive;
+    --noto-sans: 'Noto Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--noto-sans);
+}
+
+header {
+    background-image: url('assets/buttons/19.png');
+    height: 100dvh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* .headerbar  {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+.headerbar nav ul{
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+}
+.headerbar nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+} */
+
+nav {
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+.links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 1.2rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+nav .home-link {
+    margin-right: auto;
+    font-size: 1.5rem;
+    font-family: var(--pinyon-script);
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+#sidebar-toggle {
+    display: none;
+}
+
+.open-sidebar-btn, .close-sidebar-btn {
+    display: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.banner {
+    height: calc(100dvh - 96px);
+}
+
+.banner-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+}
+
+.banner-container:nth-child(1) {
+    text-align: center;
+}
+
+.banner-text {
+    text-align: center;
+    line-height: 0.7;
+    font-size: clamp(5rem, 10vw, 13rem);
+    font-weight: 400;
+    color: var(--primary-color);
+    font-family: var(--pinyon-script);
+}
+.banner-image {
+    width: 37rem;
+    
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+.btn-flat {
+    border-radius: 0 !important;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+}
+
+.btn-banner {
+    background-color: var(--random-color);
+    color: var(--tertiary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.container {
+    padding: 0 20rem !important;
+}
+
+.welcome-section {
+    background-image: url('assets/buttons/18.png');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.welcome-section .section-title {
+    font-size: 5rem;
+    color: var(--tertiary-color);
+    font-family: var(--pinyon-script);
+    font-weight: 400;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+.welcome-section .highlight {
+    color: var(--tertiary-color);
+    font-style: italic;
+}
+
+.products-section {
+    padding: 5rem 0;
+}
+
+.products-section .section-title{
+    text-align: center;
+    color: var(--primary-color);
+    font-family: var(--pinyon-script);
+    font-weight: 400;
+}
+
+.section-title {
+    font-size: clamp(3.5rem, 10vw, 5rem) !important;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 3rem;
+}
+
+.product-card {
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 256px;
+    object-fit: cover;
+}
+
+.product-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    color: var(--primary-color);
+}
+
+.product-description {
+    padding: 0 1rem;
+    margin: 1rem 0;
+    color: #555;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.subscribe-image {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    background-image: url('assets/buttons/21.png');
+    background-size: auto 100%;
+    background-position: center;
+}
+
+footer {
+    background-color: var(--secondary-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--tertiary-color);
+    padding-block: 2rem !important;
+    margin-top: -1rem;
+}
+
+.footer-content .social-icons a {
+    color: var(--tertiary-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+@media (max-width: 1023px) {
+    .container {
+        padding: 0 5rem !important;
+    }
+
+
+    .banner-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .banner-image-container {
+        display: none;
+    }
+}
+
+@media (max-width: 1279px) {
+    .container {
+        padding: 0 10rem !important;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 1.5rem !important;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .banner-image-container {
+        display: none;
+    }
+
+    .banner-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .headerbar {
+        display: none;
+    }
+
+    .links-container {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100dvh;
+        z-index: 10;
+        
+        background-color: var(--tertiary-color);
+    }
+
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 1rem 2rem;
+        justify-content: flex-start;
+
+    }
+
+    .open-sidebar-btn, .close-sidebar-btn {
+        display: block;
+    }
+
+    .close-sidebar-btn {
+        align-self: flex-end;
+        padding: 1rem 2rem;
+    }
+
+    .open-sidebar-btn {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+
+    #sidebar-toggle:checked ~ .links-container {
+        display: flex;
+    }
+}
