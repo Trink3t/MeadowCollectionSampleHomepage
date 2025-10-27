@@ -82,6 +82,7 @@
         }
         
         const submitForm = () => {
+            event.preventDefault();
             const form = document.querySelector('form');
         
             if (validateForm()) {
