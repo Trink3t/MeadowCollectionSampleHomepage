@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meadow Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox"  id="sidebar-toggle">
+            <label for="sidebar-toggle" class="open-sidebar-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <div class="links-container">
+                <label for="sidebar-toggle" class="close-sidebar-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+
+                <a href="index.html" class="home-link">
+                    <img src="assets/png/T12.png" alt="Logo" class="logo" height="64" >
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="inquire-section">
+            <div class="container">
+                <h2 class="section-title">Inquire</h2>
+                
+                <form onsubmit="return validateForm()" onchange="return validateForm()">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <small class="error-message">Name is required</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <small class="error-message">Email is required and must be valid</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Service:</label>
+                        <select name="service" id="service">
+                            <option value="">Select Service</option>
+                            <option value="0">Crochet</option>
+                            <option value="1">Custom Printing</option>
+                        </select>
+                        <small class="error-message">Service is required</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" ></textarea>
+                        <small class="error-message">Message is required</small>
+                    </div>
+                    <button type="submit" class="btn btn-banner">Submit</button>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 Meadow Collection. All rights reserved.</p>
+            <p class="social-icons" id="social-icons-container"></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        // If a "service" parameter exists
+        const service = params.get('service');
+        if (service) {
+            const select = document.getElementById('service');
+            if (select) {
+                select.value = service; // apply it
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meadow Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox"  id="sidebar-toggle">
+            <label for="sidebar-toggle" class="open-sidebar-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <div class="links-container">
+                <label for="sidebar-toggle" class="close-sidebar-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+
+                <a href="index.html" class="home-link">
+                    <img src="assets/png/T12.png" alt="Logo" class="logo" height="64" >
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="services-section">
+            <div class="container">
+                <h2 class="section-title">Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div>
+                            <img src="assets/buttons/22.png" alt="Service 1" class="service-image">
+                        </div>
+                        <div>
+                            <h3 class="service-title">Crochet</h3>
+                            <p class="service-description">Handmade crochet items made by hand.</p> 
+                            <br>
+                            <a href="inquire.html?service=0" class="btn btn-banner ">Inquire Now!</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div>
+                            <img src="assets/buttons/24.png" alt="Service 2" class="service-image">
+                        </div>
+                        <div>
+                            <h3 class="service-title">Custom Printing</h3>
+                            <p class="service-description">Personalized prints made just for you.</p> 
+                            <br>
+                            <a href="inquire.html?service=1" class="btn btn-banner ">Inquire Now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 Meadow Collection. All rights reserved.</p>
+            <p class="social-icons" id="social-icons-container"></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

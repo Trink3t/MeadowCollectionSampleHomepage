@@ -14,6 +14,21 @@
     --noto-sans: 'Noto Sans', sans-serif;
 }
 
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
 /* Global Styles */
 * {
     margin: 0;
@@ -22,12 +37,12 @@
     font-family: var(--noto-sans);
 }
 
-/* Header */
+.text-active {
+    text-decoration: underline var(--primary-color) 3px;
+}
+
 header {
-    background-image: url('assets/buttons/19.png');
-    height: 100dvh;
-    background-size: cover;
-    background-position: center;
+    border-bottom: 2px solid var(--quaternary-color);
 }
 
 /* Navigation */
@@ -149,14 +164,26 @@ nav a:hover {
     text-align: center;
 }
 
-.welcome-section .section-title {
-    font-size: 5rem;
-    color: var(--tertiary-color);
-    font-family: var(--pinyon-script);
-    font-weight: 400;
+
+.welcome-section .section-title, .products-section .section-title {
+    font-family: var(--pinyon-script) !important;
+    color: var(--tertiary-color) !important; 
+    text-transform: none !important;
+    font-weight: 400 !important;
 }
 
-.welcome-section p {
+.products-section .section-title {
+    color: var(--primary-color) !important;
+}
+
+.section-title {
+    font-size: clamp(2rem, 10vw, 5rem);
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+p {
     font-size: 1.2rem;
     margin-top: 1rem;
     line-height: 1.5;
@@ -167,15 +194,9 @@ nav a:hover {
     font-style: italic;
 }
 
-.products-section {
+section {
     padding: 5rem 0;
-}
-
-.products-section .section-title{
     text-align: center;
-    color: var(--primary-color);
-    font-family: var(--pinyon-script);
-    font-weight: 400;
 }
 
 .section-title {
@@ -231,8 +252,73 @@ nav a:hover {
     background-position: center;
 }
 
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.service-card div:first-child img {
+    width: 100%;
+    min-height: 196px;
+    max-height: 320px;
+    object-fit: cover;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group select {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    display: none;
+    text-align: left;
+}
+
+.input-error {
+    border-color: red !important;
+}
+
 footer {
     background-color: var(--secondary-color);
+    
 }
 
 .footer-content {
@@ -281,7 +367,7 @@ footer {
         flex-direction: column;
         text-align: center;
         gap: 0.5rem;
-        padding: 2rem 0 !important;
+        padding: 1dvh !important;
     }
 
     .banner-image-container {
@@ -336,4 +422,9 @@ footer {
     #sidebar-toggle:checked ~ .links-container {
         display: flex;
     }
+
+    header {
+        height: 66px;
+    }
 }
+
