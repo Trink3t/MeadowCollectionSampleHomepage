@@ -31,7 +31,7 @@
             <div class="container">
                 <h2 class="section-title">Inquire</h2>
                 
-                <form onsubmit="return validateForm()" onchange="return validateForm()">
+                <form method="post" onsubmit="return submitForm()" onchange="return validateForm()">
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name">
@@ -81,6 +81,16 @@
             }
         }
         
+        const submitForm = () => {
+            const form = document.querySelector('form');
+        
+            if (validateForm()) {
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+
+                alert(JSON.stringify(data, null, 2));
+            }
+        };
     </script>
 </body>
 </html>
